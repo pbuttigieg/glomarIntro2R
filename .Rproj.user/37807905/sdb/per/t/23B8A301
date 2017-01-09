@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "if ( !exists(\"varechem\") )  source(\"01_importData.R\") \n\n# This script outputs basic stats of our data...\n\nmean(varechem)\nsd(varechem)\nvar(varechem) # generates a variance-covariance matrix\n\n# let's export the var-covar matrix to a CSV...\nwrite.csv(var(varechem), file = \"varCovVarechem.csv\")\n\n# Let's get the sum of each variable (column)..\ncolSums(varechem)\n\n# rows?\nrowSums(varechem)\n\n# let's get the mean of each variable. Unfortunately, pre-made\n# functions don't always exists. Don't worry, we'll write our own...\n\n# create a for loop\n\n# Here's the basic format adapted from\n# http://paleocave.sciencesortof.com/2013/03/writing-a-for-loop-in-r/\n\n# foo <- seq(1, 150, by = 2)\n# foo.squared <- NULL\n# \n# for (i in 1:length(foo) ) {\n#   foo.squared[i] = foo[i]^2\n# }\n\n# first, I need to know how many variables I have\n# I use dim, but only want the second result \n# (the first is rows, which correspond to samples not variables\n# in this case)\n\n\n\nfor (i in 1:dim(varechem)[2]) {\n   m <- mean(varechem[ , i])\n   print(m)\n   rm(m)\n}\nrm(i)\n\n# let's get fancy...\n\nm <- NULL\n\nfor (i in 1:dim(varechem)[2]) {\n  m[i] <- mean(varechem[ , i])\n}\nrm(i)\n\n\nvariableMeans <- cbind(\n  colnames(varechem),\n  m\n  )\n\nvariableMeans\n\n\n# R has handy \"apply\" functions that you\n# can use instead of for loops\n# apply, sappy, lappy, tapply\n\napply(\n  X = varechem,\n  MARGIN = 2, # 1 is rows, 2 is cols\n  FUN = sum\n)\n",
+    "created" : 1483957079837.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3646676506",
+    "id" : "23B8A301",
+    "lastKnownWriteTime" : 1483961615,
+    "last_content_update" : 1483961615696,
+    "path" : "D:/gitHub/glomarIntro2R/02_basicDataSummary.R",
+    "project_path" : "02_basicDataSummary.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

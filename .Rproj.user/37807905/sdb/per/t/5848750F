@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# This script will install the vegan package and\n# write one of its in-built data sets to a CSV file\n# in R's working directory. We will reimport this data\n# in our next script...\n\ninstall.packages(\"vegan\") # install from CRAN\nrequire(vegan) # load vegan into our environment\n\n# pull the varechem data out of vegan\ndata(\"varechem\") \n\n# write the varechem object to a CSV file in our working\n# directory\n\nwrite.csv(varechem, file = \"varechem.csv\")\n\n\n\n",
+    "created" : 1483958017079.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "706276507",
+    "id" : "5848750F",
+    "lastKnownWriteTime" : 1483959016,
+    "last_content_update" : 1483959016371,
+    "path" : "D:/gitHub/glomarIntro2R/00_generateDataCSV.R",
+    "project_path" : "00_generateDataCSV.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

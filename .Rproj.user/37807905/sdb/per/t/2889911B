@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# this assumes 00_generateDataCSV.R has been run\n\nif ( !exists(\"varechem\") )  source(\"00_generateDataCSV.R\") \nrm(\"varechem\")\n\n# here's a script to import and clean up / reformat\n# (if needed) a data set!\n\n# for more info, run ?read.csv in the Console\nvarechem <- read.csv(\n  file = \"varechem.csv\",\n  header = TRUE,\n  row.names = 1,\n  sep = \",\"\n)\n\nvarechem <- as.matrix(varechem)\n\ndim(varechem)\n",
+    "created" : 1483956408503.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "271630214",
+    "id" : "2889911B",
+    "lastKnownWriteTime" : 1483959137,
+    "last_content_update" : 1483959137618,
+    "path" : "D:/gitHub/glomarIntro2R/01_importData.R",
+    "project_path" : "01_importData.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

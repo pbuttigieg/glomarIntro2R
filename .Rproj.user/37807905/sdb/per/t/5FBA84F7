@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# create a numeric vector called x\n# with the c() command...\n\nx <- c(1,2,3,4,5)\nmyMean <- mean(x)\nmySd <- sd(x)\n\nsum(x)\n\n",
+    "created" : 1483955676843.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2124821190",
+    "id" : "5FBA84F7",
+    "lastKnownWriteTime" : 1483956237,
+    "last_content_update" : 1483956237749,
+    "path" : "D:/gitHub/glomarIntro2R/glomarIntro.R",
+    "project_path" : "glomarIntro.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
