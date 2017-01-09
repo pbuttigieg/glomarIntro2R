@@ -71,3 +71,26 @@ apply(
   MARGIN = 2, # 1 is rows, 2 is cols
   FUN = sum
 )
+
+# let's put that into a function
+
+colMeans <- function(dataSet){
+  apply(
+    X = dataSet,
+    MARGIN = 2,
+    FUN = mean
+  )
+}
+
+colMeans(varechem)
+
+rowMeans <- function(dataSet){
+  apply(
+    X = dataSet,
+    MARGIN = 1,
+    FUN = mean
+  )
+}
+
+rowMeans(varechem)
+
